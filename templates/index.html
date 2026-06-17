@@ -1,57 +1,460 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Flask on Vercel</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-            background: #f5f5f5;
-        }
+<meta charset="UTF-8">
 
-        .container {
-            background: white;
-            padding: 40px;
-            width: 500px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,.1);
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h1 {
-            color: #333;
-        }
+<title>NAVER Style Main</title>
 
-        p {
-            color: #666;
-        }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #0070f3;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+<style>
 
-        button:hover {
-            background: #0059c9;
-        }
-    </style>
+
+* {
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:
+    Arial,
+    "Noto Sans KR",
+    sans-serif;
+
+}
+
+
+body {
+
+    background:#fff;
+
+    color:#222;
+
+}
+
+
+
+/* 상단 */
+
+header {
+
+
+    width:100%;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+
+
+header a {
+
+
+    margin-left:20px;
+
+    font-size:13px;
+
+    color:#555;
+
+    text-decoration:none;
+
+
+}
+
+
+
+/* 메인 */
+
+.main {
+
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-top:100px;
+
+
+}
+
+
+
+/* 로고 */
+
+
+.logo {
+
+
+    font-size:80px;
+
+    font-weight:bold;
+
+    color:#03c75a;
+
+    letter-spacing:-5px;
+
+
+}
+
+
+
+
+/* 검색창 */
+
+
+.search-box {
+
+
+    margin-top:40px;
+
+    width:600px;
+
+    height:60px;
+
+    border:2px solid #03c75a;
+
+    border-radius:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 25px;
+
+
+}
+
+
+.search-box input {
+
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:20px;
+
+
+}
+
+
+.search-btn {
+
+
+    color:#03c75a;
+
+    font-size:25px;
+
+}
+
+
+
+/* 카드 영역 */
+
+
+.content {
+
+
+    margin-top:70px;
+
+    width:900px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+
+}
+
+
+
+.card {
+
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    height:180px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.05);
+
+
+}
+
+
+
+.card h2 {
+
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.card p {
+
+
+    color:#666;
+
+    line-height:30px;
+
+
+}
+
+
+
+/* 하단 */
+
+
+footer {
+
+
+    margin-top:100px;
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:13px;
+
+
+}
+
+
+
+/* 모바일 */
+
+
+@media(max-width:700px){
+
+
+.search-box {
+
+
+    width:90%;
+
+
+}
+
+
+.content {
+
+
+    width:90%;
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+.logo {
+
+
+    font-size:60px;
+
+
+}
+
+
+}
+
+
+
+</style>
+
+
 </head>
+
+
 <body>
-    <div class="container">
-        <h1>🚀 Flask + Vercel 배포 성공</h1>
 
-        <p>GitHub와 Vercel을 이용한 첫 번째 웹사이트입니다.</p>
 
-        <button onclick="alert('Hello Flask!')">
-            클릭하기
-        </button>
-    </div>
+
+<header>
+
+
+<a href="#">
+로그인
+</a>
+
+
+<a href="#">
+회원가입
+</a>
+
+
+<a href="#">
+설정
+</a>
+
+
+</header>
+
+
+
+
+
+<section class="main">
+
+
+<div class="logo">
+
+NAVER
+
+</div>
+
+
+
+<div class="search-box">
+
+
+<input 
+type="text"
+placeholder="검색어를 입력해주세요">
+
+
+<div class="search-btn">
+
+🔍
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="content">
+
+
+
+<div class="card">
+
+
+<h2>
+뉴스
+</h2>
+
+
+<p>
+
+새로운 IT 소식<br>
+
+오늘의 주요 뉴스<br>
+
+인기 검색어
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+쇼핑
+</h2>
+
+
+<p>
+
+인기 상품<br>
+
+최저가 검색<br>
+
+쇼핑 추천
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+날씨
+</h2>
+
+
+<p>
+
+서울<br>
+
+맑음 ☀️<br>
+
+24°C
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+© 2026 Flask Vercel Project
+
+</footer>
+
+
+
+
 </body>
+
+
 </html>
